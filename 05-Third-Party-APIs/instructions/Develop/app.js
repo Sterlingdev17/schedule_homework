@@ -29,8 +29,7 @@ $(document).ready(function () {
         localStorage.setItem(keys, activities)
 
     })
-    // 
-
+    // loop to get local storage for each text area and time color
     for (var i = 0; i < areatext.length; i++) {
         var data = $(areatext[i]).attr("data-time");
         var activities = localStorage.getItem(data)
