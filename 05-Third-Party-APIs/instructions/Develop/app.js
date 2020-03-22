@@ -1,7 +1,7 @@
 
 console.log("hooked up"); // see if jS is connected,
 $(document).ready(function () {
-
+    // id for each text area
     var areatext = ["#t9", "#t10", "#t11", "#t12", "#t13", "#t14", "#t15", "#t16", "#t17"];
 
     // put today time on the dashboard
@@ -23,9 +23,9 @@ $(document).ready(function () {
         e.preventDefault();
         console.log("hello")
         // making local storage
-        var textareaElement = $(this).siblings(".col-md-10");
-        var activities = textareaElement.val()
-        var keys = $(this).attr("id");
+        var textareaElement = $(this).siblings(".col-md-10"); // save textarea in a variable
+        var activities = textareaElement.val() // get the value from the text area
+        var keys = $(this).attr("id"); // when save button push by id
         localStorage.setItem(keys, activities)
 
     })
